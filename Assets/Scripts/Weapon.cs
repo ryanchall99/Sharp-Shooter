@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField] int damageAmount = 1;
+
     StarterAssetsInputs starterAssetsInputs;
 
     void Awake() 
@@ -10,18 +12,25 @@ public class Weapon : MonoBehaviour
         starterAssetsInputs = GetComponentInParent<StarterAssetsInputs>();
     }
 
-    void Update() 
+    void Update()
     {
-        if (starterAssetsInputs.shoot)
+        HandleShoot();
+    }
+
+    void HandleShoot()
+    {
+        if (!starterAssetsInputs.shoot) return;
+
+        RaycastHit hit;
+
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity))
         {
-            RaycastHit hit;
+            EnemyHealth enemyHealth = hit.collider.GetComponent<EnemyHealth>();
 
-            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity))
-            {
-                Debug.Log(hit.collider.name);
-            }
+            // Only proceeds if enemyHealth is not null
+            enemyHealth?.TakeDamage(damageAmount); // NOTE: ? = Null Conditional Operator
+        }
 
-            starterAssetsInputs.ShootInput(false);
-        }            
+        starterAssetsInputs.ShootInput(false);
     }
 }
