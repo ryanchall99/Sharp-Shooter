@@ -3,10 +3,16 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField] Animator animator;
     [SerializeField] ParticleSystem muzzleFlash;
+
+    // --- WEAPON STATS ---
     [SerializeField] int damageAmount = 1;
 
+    // --- PLAYER INPUT ---
     StarterAssetsInputs starterAssetsInputs;
+
+    const string SHOOT_STRING = "Shoot";
 
     void Awake() 
     {
@@ -23,6 +29,7 @@ public class Weapon : MonoBehaviour
         if (!starterAssetsInputs.shoot) return;
 
         muzzleFlash.Play();
+        animator.Play(SHOOT_STRING, 0, 0f);
 
         RaycastHit hit;
 
