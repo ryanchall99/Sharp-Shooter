@@ -1402,6 +1402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 258a556f9f771974c8f8262e8cb1378f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1965277241}
   muzzleFlash: {fileID: 5510456373667028884}
   damageAmount: 1
 --- !u!1001 &2039813731
