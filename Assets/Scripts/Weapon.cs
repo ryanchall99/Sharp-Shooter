@@ -4,9 +4,13 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     [SerializeField] Animator animator;
+
+    [Header("Particle Systems")]
     [SerializeField] ParticleSystem muzzleFlash;
+    [SerializeField] GameObject hitVFXPrefab; 
 
     // --- WEAPON STATS ---
+    [Header("Weapon Stats")]
     [SerializeField] int damageAmount = 1;
 
     // --- PLAYER INPUT ---
@@ -35,6 +39,8 @@ public class Weapon : MonoBehaviour
 
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity))
         {
+            Instantiate(hitVFXPrefab, hit.point, Quaternion.identity); // Instantiates a hit VFX GameObject where the Raycast collides
+
             EnemyHealth enemyHealth = hit.collider.GetComponent<EnemyHealth>();
 
             // Only proceeds if enemyHealth is not null

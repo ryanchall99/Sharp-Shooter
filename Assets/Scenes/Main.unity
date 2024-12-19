@@ -1404,6 +1404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1965277241}
   muzzleFlash: {fileID: 5510456373667028884}
+  hitVFXPrefab: {fileID: 7745976683048415994, guid: 34135a37698697445b82eb0519b69a2d, type: 3}
   damageAmount: 1
 --- !u!1001 &2039813731
 PrefabInstance:
