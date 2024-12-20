@@ -4,4 +4,5 @@ using UnityEngine;
 public class WeaponSO : ScriptableObject
 {
     public int Damage = 1;
+    public GameObject HitVFXPrefab; 
 }
