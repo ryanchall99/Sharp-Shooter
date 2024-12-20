@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour
 
     // --- WEAPON STATS ---
     [Header("Weapon Stats")]
-    [SerializeField] int damageAmount = 1;
+    [SerializeField] WeaponSO weaponSO;
 
     // --- PLAYER INPUT ---
     StarterAssetsInputs starterAssetsInputs;
@@ -44,7 +44,7 @@ public class Weapon : MonoBehaviour
             EnemyHealth enemyHealth = hit.collider.GetComponent<EnemyHealth>();
 
             // Only proceeds if enemyHealth is not null
-            enemyHealth?.TakeDamage(damageAmount); // NOTE: ? = Null Conditional Operator
+            enemyHealth?.TakeDamage(weaponSO.Damage); // NOTE: ? = Null Conditional Operator
         }
 
         starterAssetsInputs.ShootInput(false);
