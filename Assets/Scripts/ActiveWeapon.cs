@@ -13,6 +13,8 @@ public class ActiveWeapon : MonoBehaviour
 
     const string SHOOT_STRING = "Shoot";
 
+    float timeSinceLastShot = 0f;
+
     void Awake() 
     {
         starterAssetsInputs = GetComponentInParent<StarterAssetsInputs>();
@@ -26,6 +28,7 @@ public class ActiveWeapon : MonoBehaviour
 
     void Update()
     {
+        timeSinceLastShot += Time.deltaTime; // Fire Rate Logic
         HandleShoot();
     }
 
@@ -33,8 +36,13 @@ public class ActiveWeapon : MonoBehaviour
     {
         if (!starterAssetsInputs.shoot) return;
 
-        currentWeapon.Shoot(weaponSO);
-        animator.Play(SHOOT_STRING, 0, 0f);
+        if (timeSinceLastShot >= weaponSO.FireRate)
+        {
+            currentWeapon.Shoot(weaponSO);
+            animator.Play(SHOOT_STRING, 0, 0f);
+            timeSinceLastShot = 0f; // Reset Timer
+        }
+
         starterAssetsInputs.ShootInput(false);
     }
 }
