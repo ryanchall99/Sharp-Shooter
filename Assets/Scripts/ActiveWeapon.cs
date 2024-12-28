@@ -34,7 +34,15 @@ public class ActiveWeapon : MonoBehaviour
 
     public void SwitchWeapon(WeaponSO weaponSO) 
     {
-        Debug.Log("Player picked up " + weaponSO.name);
+        if (currentWeapon)
+        {
+            Destroy(currentWeapon.gameObject);
+        }
+
+        Weapon newWeapon = Instantiate(weaponSO.weaponPrefab, transform).GetComponent<Weapon>();
+        // Update Weapon & Weapon Stats (WeaponSO)
+        currentWeapon = newWeapon;
+        this.weaponSO = weaponSO;
     }
 
     void HandleShoot()
