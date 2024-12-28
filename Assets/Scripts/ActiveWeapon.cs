@@ -28,8 +28,8 @@ public class ActiveWeapon : MonoBehaviour
 
     void Update()
     {
-        timeSinceLastShot += Time.deltaTime; // Fire Rate Logic
         HandleShoot();
+        HandleZoom();
     }
 
     public void SwitchWeapon(WeaponSO weaponSO) 
@@ -47,6 +47,8 @@ public class ActiveWeapon : MonoBehaviour
 
     void HandleShoot()
     {
+        timeSinceLastShot += Time.deltaTime; // Fire Rate Logic
+
         if (!starterAssetsInputs.shoot) return;
 
         if (timeSinceLastShot >= weaponSO.FireRate)
@@ -59,6 +61,16 @@ public class ActiveWeapon : MonoBehaviour
         if (!weaponSO.IsAutomatic)
         {
             starterAssetsInputs.ShootInput(false);
+        }
+    }
+
+    void HandleZoom()
+    {
+        if (!weaponSO.CanZoom) return;
+
+        if (starterAssetsInputs.zoom)
+        {
+            Debug.Log("Zooming In");
         }
     }
 }
