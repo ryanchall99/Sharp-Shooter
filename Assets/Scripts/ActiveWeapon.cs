@@ -8,22 +8,30 @@ public class ActiveWeapon : MonoBehaviour
     [Header("Weapon Stats")]
     [SerializeField] WeaponSO weaponSO;
 
-    [Header("Player Camera")]
+    [Header("Weapon Zoom")]
     [SerializeField] CinemachineVirtualCamera playerFollowCamera;
-    [SerializeField] float defaultFOV = 40f;
+    [SerializeField] GameObject zoomVignette;
 
     Animator animator;
     StarterAssetsInputs starterAssetsInputs;
+    FirstPersonController firstPersonController;
     Weapon currentWeapon;
 
     const string SHOOT_STRING = "Shoot";
 
     float timeSinceLastShot = 0f;
+    float defaultFOV;
+    float defaultRotationSpeed;
 
     void Awake() 
     {
         starterAssetsInputs = GetComponentInParent<StarterAssetsInputs>();
+        firstPersonController = GetComponentInParent<FirstPersonController>();
         animator = GetComponent<Animator>();
+
+        // Default Values
+        defaultFOV = playerFollowCamera.m_Lens.FieldOfView;
+        defaultRotationSpeed = firstPersonController.RotationSpeed;
     }
 
     void Start() 
@@ -77,10 +85,14 @@ public class ActiveWeapon : MonoBehaviour
         if (starterAssetsInputs.zoom)
         {
             playerFollowCamera.m_Lens.FieldOfView = weaponSO.ZoomAmount;
+            firstPersonController.ChangeRotationSpeed(weaponSO.ZoomRotationSpeed);
+            zoomVignette.SetActive(true);
         }
         else 
         {
             playerFollowCamera.m_Lens.FieldOfView = defaultFOV;
+            firstPersonController.ChangeRotationSpeed(defaultRotationSpeed);
+            zoomVignette.SetActive(false);
         }
     }
 }

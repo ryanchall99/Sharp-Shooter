@@ -129,6 +129,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2520629561733503030, guid: 9335f2a6bb7e5df45a74178924badccb, type: 3}
   m_PrefabInstance: {fileID: 1633635908}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &214800048 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5598344732649737627, guid: 1d445c19bfae29f4d9661ec225a28aa6, type: 3}
+  m_PrefabInstance: {fileID: 108402331288949966}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &356601255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1847,6 +1852,10 @@ PrefabInstance:
       propertyPath: weaponSO
       value: 
       objectReference: {fileID: 11400000, guid: f4f4cff7809541b45845eacc0b00f95e, type: 2}
+    - target: {fileID: 389957386493238732, guid: 9335f2a6bb7e5df45a74178924badccb, type: 3}
+      propertyPath: zoomVignette
+      value: 
+      objectReference: {fileID: 214800048}
     - target: {fileID: 389957386493238732, guid: 9335f2a6bb7e5df45a74178924badccb, type: 3}
       propertyPath: playerFollowCamera
       value: 

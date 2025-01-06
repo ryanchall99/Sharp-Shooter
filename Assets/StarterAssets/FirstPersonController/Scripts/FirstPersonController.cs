@@ -122,6 +122,12 @@ namespace StarterAssets
 			CameraRotation();
 		}
 
+		public void ChangeRotationSpeed(float amount)
+		{
+			// Set rotation speed
+			RotationSpeed = amount;
+		}
+
 		private void GroundedCheck()
 		{
 			// set sphere position, with offset
