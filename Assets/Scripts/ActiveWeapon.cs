@@ -1,3 +1,4 @@
+using Cinemachine;
 using StarterAssets;
 using UnityEngine;
 
@@ -6,6 +7,10 @@ public class ActiveWeapon : MonoBehaviour
     // --- WEAPON STATS ---
     [Header("Weapon Stats")]
     [SerializeField] WeaponSO weaponSO;
+
+    [Header("Player Camera")]
+    [SerializeField] CinemachineVirtualCamera playerFollowCamera;
+    [SerializeField] float defaultFOV = 40f;
 
     Animator animator;
     StarterAssetsInputs starterAssetsInputs;
@@ -58,6 +63,7 @@ public class ActiveWeapon : MonoBehaviour
             timeSinceLastShot = 0f; // Reset Timer
         }
 
+        // If Weapon Is Not Automatic
         if (!weaponSO.IsAutomatic)
         {
             starterAssetsInputs.ShootInput(false);
@@ -66,11 +72,15 @@ public class ActiveWeapon : MonoBehaviour
 
     void HandleZoom()
     {
-        if (!weaponSO.CanZoom) return;
+        if (!weaponSO.CanZoom) return; // Cannot Zoom In
 
         if (starterAssetsInputs.zoom)
         {
-            Debug.Log("Zooming In");
+            playerFollowCamera.m_Lens.FieldOfView = weaponSO.ZoomAmount;
+        }
+        else 
+        {
+            playerFollowCamera.m_Lens.FieldOfView = defaultFOV;
         }
     }
 }

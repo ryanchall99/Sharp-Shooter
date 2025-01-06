@@ -814,6 +814,17 @@ Transform:
   - {fileID: 106314806}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1307459342 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8538170068523429106, guid: ce39beba509c6ea4cb0989458dc9a378, type: 3}
+  m_PrefabInstance: {fileID: 3030139891432853891}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1538542927 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4364522835175172856, guid: 9335f2a6bb7e5df45a74178924badccb, type: 3}
@@ -1836,6 +1847,10 @@ PrefabInstance:
       propertyPath: weaponSO
       value: 
       objectReference: {fileID: 11400000, guid: f4f4cff7809541b45845eacc0b00f95e, type: 2}
+    - target: {fileID: 389957386493238732, guid: 9335f2a6bb7e5df45a74178924badccb, type: 3}
+      propertyPath: playerFollowCamera
+      value: 
+      objectReference: {fileID: 1307459342}
     - target: {fileID: 644505032222692201, guid: 9335f2a6bb7e5df45a74178924badccb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.06700003
@@ -4387,6 +4402,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5598344732649737627, guid: 1d445c19bfae29f4d9661ec225a28aa6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9201765570447224074, guid: 1d445c19bfae29f4d9661ec225a28aa6, type: 3}
       propertyPath: m_Name
       value: Overlay Canvas
@@ -4753,13 +4772,13 @@ SceneRoots:
   m_Roots:
   - {fileID: 410087041}
   - {fileID: 832575519}
+  - {fileID: 108402331288949966}
   - {fileID: 2205393359776173545}
   - {fileID: 1633635908}
   - {fileID: 3030139891432853891}
   - {fileID: 599233937}
   - {fileID: 1252814119}
   - {fileID: 1759003534}
-  - {fileID: 108402331288949966}
   - {fileID: 1960909450}
   - {fileID: 1562421091}
   - {fileID: 886560172896757961}
