@@ -56,6 +56,7 @@ public class ActiveWeapon : MonoBehaviour
         HandleZoom();
     }
 
+    /* --- PUBLIC METHODS ---*/
     public void AdjustAmmo(int amount)
     {
         currentAmmo += amount; // Adjust Ammo By Amount Passed In
@@ -84,6 +85,7 @@ public class ActiveWeapon : MonoBehaviour
         AdjustAmmo(currentWeaponSO.MagazineSize);
     }
 
+    /* --- PRIVATE METHODS --- */
     void HandleShoot()
     {
         timeSinceLastShot += Time.deltaTime; // Fire Rate Logic

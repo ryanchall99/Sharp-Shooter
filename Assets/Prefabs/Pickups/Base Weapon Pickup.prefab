@@ -129,7 +129,6 @@ GameObject:
   - component: {fileID: 4967956800591821736}
   - component: {fileID: 5682981608940564876}
   - component: {fileID: 2887209175629155427}
-  - component: {fileID: 8091168039563370593}
   m_Layer: 0
   m_Name: Base Weapon Pickup
   m_TagString: Untagged
@@ -165,6 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73be02d2bad997c4384d328c6e896a9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 100
   weaponSO: {fileID: 0}
 --- !u!136 &2887209175629155427
 CapsuleCollider:
@@ -189,25 +189,3 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &8091168039563370593
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5828509933416419980}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f57a648d137634b459ba4239f5378077, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
