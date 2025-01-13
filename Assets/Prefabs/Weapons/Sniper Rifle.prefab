@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 523215831159564133}
   - component: {fileID: 1207618724489717451}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Sniper Rifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4918224195764149028}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,6 +129,10 @@ PrefabInstance:
     - target: {fileID: 7900750024076317246, guid: 5ddb8ede2919d624bb733219cd70a898, type: 3}
       propertyPath: m_Name
       value: Muzzle Flash
+      objectReference: {fileID: 0}
+    - target: {fileID: 7900750024076317246, guid: 5ddb8ede2919d624bb733219cd70a898, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8843802695421528223, guid: 5ddb8ede2919d624bb733219cd70a898, type: 3}
       propertyPath: m_LocalScale.x
@@ -252,6 +256,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 860f35edef6dcfe40b58b14593dfeafb, type: 3}
       propertyPath: m_Name
       value: Sniper_01_Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 860f35edef6dcfe40b58b14593dfeafb, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
