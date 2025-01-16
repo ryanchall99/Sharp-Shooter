@@ -23,6 +23,8 @@ public class Robot : MonoBehaviour
 
     void Update() 
     {
+        if (!player) return; // If no player do not proceed
+
         nmAgent.SetDestination(player.transform.position);
     }
 

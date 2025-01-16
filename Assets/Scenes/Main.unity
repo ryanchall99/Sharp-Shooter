@@ -1976,10 +1976,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1721399173}
     - target: {fileID: 389957386493238732, guid: 9335f2a6bb7e5df45a74178924badccb, type: 3}
-      propertyPath: weaponCamera
-      value: 
-      objectReference: {fileID: 1576944942}
-    - target: {fileID: 389957386493238732, guid: 9335f2a6bb7e5df45a74178924badccb, type: 3}
       propertyPath: zoomVignette
       value: 
       objectReference: {fileID: 214800048}
@@ -1990,10 +1986,6 @@ PrefabInstance:
     - target: {fileID: 2820467305122285042, guid: 9335f2a6bb7e5df45a74178924badccb, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3550683337108236612, guid: 9335f2a6bb7e5df45a74178924badccb, type: 3}
-      propertyPath: m_RenderPostProcessing
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4314708215167717537, guid: 9335f2a6bb7e5df45a74178924badccb, type: 3}
       propertyPath: m_LocalPosition.x
