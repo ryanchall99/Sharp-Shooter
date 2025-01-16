@@ -20,6 +20,7 @@ public class ActiveWeapon : MonoBehaviour
 
     /* --- PLAYER --- */
     Animator animator;
+    AudioSource audioSource;
     StarterAssetsInputs starterAssetsInputs;
     FirstPersonController firstPersonController;
     
@@ -39,6 +40,7 @@ public class ActiveWeapon : MonoBehaviour
         starterAssetsInputs = GetComponentInParent<StarterAssetsInputs>();
         firstPersonController = GetComponentInParent<FirstPersonController>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
         // Default Values
         defaultFOV = playerFollowCamera.m_Lens.FieldOfView;
@@ -98,7 +100,16 @@ public class ActiveWeapon : MonoBehaviour
             AdjustAmmo(-1);
             currentWeapon.Shoot(currentWeaponSO);
             animator.Play(SHOOT_STRING, 0, 0f);
+            audioSource.PlayOneShot(currentWeaponSO.shootAudio, 0.1f);
             timeSinceLastShot = 0f; // Reset Timer
+        }
+        else if (currentAmmo <= 0)
+        {
+            audioSource.PlayOneShot(currentWeaponSO.emptyAudio, 0.1f);
+            if (currentWeaponSO.IsAutomatic) 
+            {
+                starterAssetsInputs.ShootInput(false); // Used to stop audio glitching on Automatic Weapons
+            }
         }
 
         // If Weapon Is Not Automatic
