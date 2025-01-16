@@ -832,6 +832,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!4 &1192500079 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5237091058649453499, guid: 80b52bdab9b7cf546920187e8a508caa, type: 3}
+  m_PrefabInstance: {fileID: 1606042678}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1252814118
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,6 +867,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 106314806}
+  - {fileID: 1192500079}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1307459342 stripped
@@ -1906,7 +1912,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1252814119}
     m_Modifications:
     - target: {fileID: 5237091058649453499, guid: 80b52bdab9b7cf546920187e8a508caa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1914,7 +1920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5237091058649453499, guid: 80b52bdab9b7cf546920187e8a508caa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.0516996
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 5237091058649453499, guid: 80b52bdab9b7cf546920187e8a508caa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1926,15 +1932,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5237091058649453499, guid: 80b52bdab9b7cf546920187e8a508caa, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5237091058649453499, guid: 80b52bdab9b7cf546920187e8a508caa, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5237091058649453499, guid: 80b52bdab9b7cf546920187e8a508caa, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5237091058649453499, guid: 80b52bdab9b7cf546920187e8a508caa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4929,4 +4935,3 @@ SceneRoots:
   - {fileID: 1960909450}
   - {fileID: 1562421091}
   - {fileID: 482977894}
-  - {fileID: 1606042678}

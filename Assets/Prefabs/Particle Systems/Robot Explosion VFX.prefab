@@ -43,7 +43,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 0.1
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 3
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -4836,6 +4836,7 @@ GameObject:
   - component: {fileID: 8663844137437864744}
   - component: {fileID: 884823562232568425}
   - component: {fileID: 1919488737520900169}
+  - component: {fileID: -5241494806207924922}
   m_Layer: 0
   m_Name: Robot Explosion VFX
   m_TagString: Untagged
@@ -4942,7 +4943,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 15
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -9530,3 +9531,15 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-5241494806207924922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4722169233805752631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 973744c3a3a387d46a96ff4d0ee8e780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

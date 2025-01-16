@@ -21,9 +21,14 @@ public class EnemyHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Instantiate(destroyVFX, transform.position, Quaternion.identity);
-            // Destroy GameObject if health is equal or below 0
-            Destroy(this.gameObject);
+            SelfDestruct();
         }
+    }
+
+    public void SelfDestruct()
+    {
+        Instantiate(destroyVFX, transform.position, Quaternion.identity);
+        // Destroy GameObject if health is equal or below 0
+        Destroy(this.gameObject);   
     }
 }
