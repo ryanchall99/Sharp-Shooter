@@ -6,6 +6,7 @@ public class AmmoPickup : BasePickup
 
     protected override void OnPickup(ActiveWeapon activeWeapon)
     {
+        AudioManager.Instance.PlaySFX("Ammo Pickup", 0.2f);
         activeWeapon.AdjustAmmo(ammoAmount);
     }
 }

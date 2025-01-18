@@ -100,12 +100,12 @@ public class ActiveWeapon : MonoBehaviour
             AdjustAmmo(-1);
             currentWeapon.Shoot(currentWeaponSO);
             animator.Play(SHOOT_STRING, 0, 0f);
-            audioSource.PlayOneShot(currentWeaponSO.shootAudio, 0.1f);
+            AudioManager.Instance.PlaySFX("Pistol Audio", 0.1f);
             timeSinceLastShot = 0f; // Reset Timer
         }
         else if (currentAmmo <= 0)
         {
-            audioSource.PlayOneShot(currentWeaponSO.emptyAudio, 0.1f);
+            AudioManager.Instance.PlaySFX("Out Of Ammo", 0.1f);
             if (currentWeaponSO.IsAutomatic) 
             {
                 starterAssetsInputs.ShootInput(false); // Used to stop audio glitching on Automatic Weapons
